@@ -28,6 +28,7 @@ const Navigation = () => {
           </Typography>
          <Link to='/' style={{color:'black'}}> <Button color="inherit">Home</Button></Link>
          <Link to='/dashboard'  style={{color:'black'}}> <Button color="inherit">Dashboard</Button></Link>
+         <Link to='/dolar'  style={{color:'black'}}> <Button color="inherit">$$</Button></Link>
          <Link to='/login'  style={{color:'black'}}> <Button color="inherit">Login</Button></Link>
     
         </Toolbar>
