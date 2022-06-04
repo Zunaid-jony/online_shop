@@ -1,68 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import SubMenus from './SubMenus';
-import { MenuItems, Items }from '../../../Componet/data'
-import MenuCard from './MenuCard';
-import ItemCard from './ItemCard';
+import React, { useEffect, useState } from "react";
+import SubMenus from "./SubMenus";
+import { MenuItems, Items } from "../../../Componet/data";
+import MenuCard from "./MenuCard";
+import ItemCard from "./ItemCard";
+import { light } from "@mui/material/styles/createPalette";
+import { BrowserRouter } from "react-router-dom";
 
 const SubMenu = () => {
+  const [items, setItems] = useState([]);
+  const [allItem, setAllItems] = useState([]);
+  const [category, setCategory] = useState("buger01");
+  const [mainData, setMainData] = useState([]);
 
-     const [item, setItems]= useState([]);
-     useEffect(()=>{
-         fetch('fetchdata.json')
-         .then(res=> res.json())
-         .then(data => setItems(data))
-     },[]);
-
-
-     const [allItem, setAllItems]=useState([]);
-     useEffect(()=>{
-         fetch('fetchdatas.json')
-         .then(res=>res.json())
-         .then(data=> setAllItems(data))
-     },[])
-
-
-     //main dish state
-  const [isMainData, setMainData]= useState(
-    // Items.filter((element)=> element.itemId === "pizza01")
-    allItem.filter((element)=> element.itemId === "pizza01")
-  );
-    //end
+  function filterData(id) {
+    const data = allItem.filter((item) => item.itemId === id);
+    setMainData(data);
+  }
 
   useEffect(() => {
-    const menuLi = document.querySelectorAll("#menu li");
-    function setMenuActive() {
-      menuLi.forEach((n) => n.classList.remove("active"));
-      this.classList.add("active");
-    }
-    menuLi.forEach((n) => n.addEventListener("click", setMenuActive));
+    fetch("fetchdata.json")
+      .then((res) => res.json())
+      .then((data) => setItems(data));
 
-    // Menu cards
-    
-    const menuCards = document
-      .querySelector(".rowContainer")
-      .querySelectorAll(".rowMenuCard");
-    function setMenuCardActive() {
-      menuCards.forEach((n) => n.classList.remove("active"));
-      this.classList.add("active");
-    }
-    menuCards.forEach((n) => n.addEventListener("click", setMenuCardActive));
-    //isMainData ata deya hoise
-  }, [isMainData]);
+    fetch("fetchdatas.json")
+      .then((res) => res.json())
+      .then((data) => setAllItems(data));
+
+    //   if(category) {
+    //     filterData(category)
+    //   }
+  }, []);
+
+  //main dish state
+
+  //end
+
+  //   useEffect(() => {
+  //     if (category) {
+  //       const data = allItem.filter((item) => item.itemId === category);
+  //       setMainData(data);
+  //     }
+  //   }, [category]);
 
   //main dish on function filters
-  const setData =(itemId)=>{
-    setMainData(allItem.filter((element)=> element.itemId === itemId ))
-  }
-    return (
-        <div>
-             <div className="dishContainer">
-            <div className="menuCard">
-              <SubMenus name={"Menu Category"} />
-            </div>
-            {/* dfffffffffffffff */}
-            <div className="rowContainer">
-              {/* {MenuItems &&
+
+  return (
+    <div>
+      <div className="dishContainer">
+        <div className="menuCard">
+          <SubMenus name={"Menu Category"} />
+        </div>
+        {/* dfffffffffffffff */}
+        <div className="rowContainer">
+          {/* {MenuItems &&
                 MenuItems.map((data) => (
                   <div key={data.id} onClick={()=> setData(data.itemId)}>
                     <MenuCard
@@ -74,53 +64,51 @@ const SubMenu = () => {
                   </div>
                 ))} */}
 
-
-            {
-               item && item.map(item =><MenuCard
-            
-                 
-                key={item.id}
-                onClick={()=>setData(item.itemId)}
-               
+          {items.map((item) => (
+            <div
+              key={item.id}
+              onClick={() => {
+                setCategory(item);
+                filterData(item.itemId);
+                console.log(item);
+              }}
+            >
+              <MenuCard
                 item={item}
-                isActive ={item.id === 1 ? true : false}
-                
-                > </MenuCard> )
-            }
+                isActive={item.id === category?.id ? true : false}
+              >
+                {" "}
+              </MenuCard>
             </div>
+          ))}
+        </div>
 
+        {/*filter card */}
 
-            {/*filter card */}
-            
-            <div className="dishitemContainer">
-            {
+        <div className="dishitemContainer">
+          {
+            category 
+              ? mainData.map((item) => (
+                  <ItemCard key={item.id} allItem={item}></ItemCard>
+                ))
+              : allItem.map((item) => (
+                  <ItemCard key={item.id} allItem={item}></ItemCard>
+                ))
 
-
-         isMainData && allItem.map(allItem => <ItemCard
-                key={allItem.id}
-                allItem={allItem}
-                
-                ></ItemCard>)
             //   isMainData && isMainData.map(data=> (
-            //     <ItemCard 
+            //     <ItemCard
             //     key={data.id}
             //     imgSrc={data.imgSrc}
-            //      name={data.name} 
+            //      name={data.name}
             //      ratings={data.ratings}
             //       price={data.price} />
 
             //   ))
-            }
-
-
-     
-            
-
-            </div>
-          </div>
-            
+          }
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default SubMenu;
