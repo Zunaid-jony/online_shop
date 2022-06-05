@@ -4,12 +4,22 @@ import SubMenuContainer from './SubMenuContainer';
 import CardItem from './CaidItem';
 
 import Froot from '../../images/img/f5.png'
+import { useCart } from 'react-use-cart';
 
-const componentName = () => {
+// allItem
+
+const DevidCard = ( ) => {
+  
+ const {allItem}= useCart();
+  // add to card itemCard thake click kara hoise 
+
+
     return (
+    
         <div className="rightMenu">
         <div className="debitCardContainer">
           <div className="debitCard">
+       
             <RoketCard/> 
             
           </div>
@@ -27,7 +37,7 @@ const componentName = () => {
              qty={'4'}
              /> 
 
-             {/*  */}
+             
 
             </div>  
           </div>
@@ -43,4 +53,4 @@ const componentName = () => {
     );
 };
 
-export default componentName;
+export default DevidCard;

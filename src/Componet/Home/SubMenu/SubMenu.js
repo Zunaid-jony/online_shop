@@ -9,7 +9,8 @@ import { BrowserRouter } from "react-router-dom";
 const SubMenu = () => {
   const [items, setItems] = useState([]);
   const [allItem, setAllItems] = useState([]);
-  const [category, setCategory] = useState("buger01");
+  const [category, setCategory] = useState("");
+  // const [category, setCategory] = useState("buger01");  //ata akto dekte hobe 
   const [mainData, setMainData] = useState([]);
 
   function filterData(id) {
@@ -29,7 +30,7 @@ const SubMenu = () => {
     //   if(category) {
     //     filterData(category)
     //   }
-  }, []);
+  }, [category]);
 
   //main dish state
 
@@ -43,6 +44,10 @@ const SubMenu = () => {
   //   }, [category]);
 
   //main dish on function filters
+//   const [isMainData, setMainDataa]=useState(
+//     allItem.filter((e)=> e.itemId=== "buger01")
+
+//   )
 
   return (
     <div>
@@ -87,11 +92,11 @@ const SubMenu = () => {
 
         <div className="dishitemContainer">
           {
-            category 
+           category 
               ? mainData.map((item) => (
                   <ItemCard key={item.id} allItem={item}></ItemCard>
                 ))
-              : allItem.map((item) => (
+              :  allItem.map((item) => (
                   <ItemCard key={item.id} allItem={item}></ItemCard>
                 ))
 

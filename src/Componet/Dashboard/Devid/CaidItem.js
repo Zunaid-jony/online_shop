@@ -1,7 +1,7 @@
 import { AddRounded, RemoveRounded } from '@mui/icons-material'
 import React from 'react'
 
-function CardItem({imgSrc, qty,price,name}) {
+function CardItem({ allItem,imgSrc, qty,price,name}) {
   return (
     <div className='cardItem'>
         <div className='imgBox'>
