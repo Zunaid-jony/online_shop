@@ -4,7 +4,7 @@ import React from "react";
 import GridViewIcon from "@mui/icons-material/GridView";
 import { useCart } from "react-use-cart";
 
-function ItemCard({ allItem }) {
+function ItemCard({ allItem, handleClick }) {
   const { imgSrc, name, ratings, price } = allItem;
   // add to card
   const{addItem} = useCart();
@@ -29,7 +29,7 @@ function ItemCard({ allItem }) {
               <GridViewIcon></GridViewIcon>
             </h3>
           </div>
-          <i  onClick={()=> addItem(allItem)} 
+          <i  onClick={()=> handleClick(allItem)}
            className="addtoCart">
             <AddRounded></AddRounded>
           </i>
