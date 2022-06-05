@@ -12,16 +12,6 @@ const SubMenu = () => {
   const [category, setCategory] = useState("");
   // const [category, setCategory] = useState("buger01");  //ata akto dekte hobe 
   const [mainData, setMainData] = useState([]);
-  
-  
-  //add button click r jonn
-  const [cart , setCart]=useState([])
-  const handleClick =(allItem)=>{
-    setCart([...cart,allItem])
-    cart.push(allItem);
-    console.log(cart)
-         
-  }
 
   function filterData(id) {
     const data = allItem.filter((item) => item.itemId === id);
@@ -107,10 +97,7 @@ const SubMenu = () => {
                   <ItemCard key={item.id} allItem={item}></ItemCard>
                 ))
               :  allItem.map((item) => (
-                  <ItemCard key={item.id}
-                  
-                  handleClick={handleClick}
-                  allItem={item}></ItemCard>
+                  <ItemCard key={item.id} allItem={item}></ItemCard>
                 ))
 
             //   isMainData && isMainData.map(data=> (

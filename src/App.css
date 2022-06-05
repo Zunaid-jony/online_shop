@@ -750,6 +750,10 @@ justify-content: center;
   margin-top: 10px;
   cursor: pointer;
 }
+/* add to card new card  */
+.addToCard{
+  margin-top: 60px;
+}
 
 
 
@@ -913,4 +917,15 @@ justify-content: center;
 }
 
   
+}
+
+/* phone  midiya quiry */
+@media (max-width:600px){
+
+  .remove{
+    width: 130px;
+    height: 40px;
+    margin: 3px;
+    background-color: #b3085d;
+  }
 }

@@ -5,22 +5,28 @@ import Navigation from './Componet/Shared/Navigation/Navigation';
 import Home from './Componet/Home/Home/Home';
 import Login from './Componet/Login/Login';
 import DevidCard from './Componet/Dashboard/Devid/DevidCard'
+import AddItems from './Componet/Home/SubMenu/AddItems';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { CartProvider } from 'react-use-cart';
 
 
 
 function App() {
   return (
     <div className="App">
+      <CartProvider>
       <BrowserRouter>
         <Navigation></Navigation>
       
        <Routes>
          <Route path='/' element={<Home></Home>}> </Route> 
-         <Route path='/login' element={<Login></Login>}> </Route> 
-         <Route path='/dolar' element={<DevidCard></DevidCard> }> </Route> 
+         <Route path='/login' element={<AddItems></AddItems>}> </Route> 
+         {/* <Route path='/login' element={<Login></Login>}> </Route>  */}
+         {/* <Route path='/dolar' element={<DevidCard></DevidCard> }> </Route>  */}
      
        </Routes>
       </BrowserRouter> 
+      </CartProvider>
 
     </div>
   );
