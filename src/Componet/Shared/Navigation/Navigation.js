@@ -10,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import DashboardCustomizeRoundedIcon from '@mui/icons-material/DashboardCustomizeRounded';
 import LockOpenRoundedIcon from '@mui/icons-material/LockOpenRounded';
+import HomeIcon from '@mui/icons-material/Home';
 const Navigation = () => {
     return (
         <div>
@@ -28,10 +29,10 @@ const Navigation = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             
           </Typography>
-         <Link to='/' style={{color:'black'}}> <Button color="inherit">Home</Button></Link>
-         <Link to='/dashboard'  style={{color:'black'}}> <Button color="inherit"><DashboardCustomizeRoundedIcon/></Button></Link>
-         <Link to='/buy'  style={{color:'black'}}> <Button color="inherit"> <ShoppingCartRoundedIcon/></Button></Link>
-         <Link to='/login'  style={{color:'black'}}> <Button color="inherit">< LockOpenRoundedIcon></LockOpenRoundedIcon></Button></Link>
+         <Link to='/' style={{color:'#d84c92'}}> <Button color="inherit"><HomeIcon></HomeIcon></Button></Link>
+         <Link to='/dashboard'  style={{color:'#d84c92'}}> <Button color="inherit"><DashboardCustomizeRoundedIcon/></Button></Link>
+         <Link to='/buy'  style={{color:'#d84c92'}}> <Button color="inherit"> <ShoppingCartRoundedIcon/></Button></Link>
+         <Link to='/login'  style={{color:'#d84c92'}}> <Button color="inherit">< LockOpenRoundedIcon></LockOpenRoundedIcon></Button></Link>
     
         </Toolbar>
       </AppBar>

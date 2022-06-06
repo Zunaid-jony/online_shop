@@ -761,9 +761,15 @@ justify-content: center;
   margin-top: 70px;
 }
 .loginInput{
-  
-  margin-top: 70px;
-  margin-left: 600px;
+ 
+  margin-top: 170px;
+
+ text-align: center;
+  background-color: white;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.15);
+  width: 600px;
+  height: 400px;
+  margin-left: 390px;
 }
 
 
