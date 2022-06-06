@@ -1,9 +1,21 @@
+import { TextField } from '@mui/material';
 import React from 'react';
 
 const Login = () => {
     return (
-        <div>
-            login pages
+        <div className='loginSection'>
+            <div className='loginInput'>
+            <TextField  label="Outlined" variant="outlined" />
+            <br></br>
+            <TextField  label="Outlined" variant="outlined" />
+            <br></br>
+            <TextField  label="Outlined" variant="outlined" />
+            
+                
+            </div> 
+
+           
+    
         </div>
     );
 };

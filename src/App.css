@@ -755,7 +755,16 @@ justify-content: center;
   margin-top: 60px;
 }
 
-
+/* navigation */
+/* login sections */
+.loginSection{
+  margin-top: 70px;
+}
+.loginInput{
+  
+  margin-top: 70px;
+  margin-left: 600px;
+}
 
 
 
