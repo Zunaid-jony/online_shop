@@ -756,6 +756,17 @@ justify-content: center;
 }
 
 /* navigation */
+.navigations Button .natifications{
+ 
+  border-radius: 90px;
+  margin-top: -8px;
+  margin-right: -20px;
+  color: rgb(53, 38, 136);
+  text-decoration: none;
+  font-size: 16px;
+
+
+}
 /* login sections */
 .loginSection{
   margin-top: 70px;
