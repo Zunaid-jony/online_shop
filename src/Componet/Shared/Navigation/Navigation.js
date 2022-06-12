@@ -12,7 +12,9 @@ import DashboardCustomizeRoundedIcon from '@mui/icons-material/DashboardCustomiz
 import LockOpenRoundedIcon from '@mui/icons-material/LockOpenRounded';
 import HomeIcon from '@mui/icons-material/Home';
 import { useCart } from 'react-use-cart';
+import useAuth from './../../../hooks/useAuth';
 const Navigation = () => {
+  const {user, logout} = useAuth()
   const { isEmpty,
     totalUniqueItems,
     items,
@@ -46,8 +48,14 @@ const Navigation = () => {
             <ShoppingCartRoundedIcon/> 
             
             </Button></Link>
-         <Link to='/login'  style={{color:'#d84c92'}}> <Button color="inherit">< LockOpenRoundedIcon></LockOpenRoundedIcon></Button></Link>
+          {
+
+            user?.email?
+            <Link to='/login'  style={{color:'#d84c92'}}> <Button onClick={logout} color="inherit"> logOut </Button></Link> :
+            <Link to='/login'  style={{color:'#d84c92'}}> <Button color="inherit">< LockOpenRoundedIcon></LockOpenRoundedIcon></Button></Link>
     
+    
+          }
         </Toolbar>
       </AppBar>
     </Box>
