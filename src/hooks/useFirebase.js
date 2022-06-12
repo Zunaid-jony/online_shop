@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -36,6 +37,19 @@ const useFirebase = () => {
         // An error happened.
       });
   };
+  //login user
+  const loginUser = (email,password) =>{
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+  }
   // user state change
   useEffect(() => {
    const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -53,6 +67,7 @@ const useFirebase = () => {
     user,
     registerUser,
     logout,
+    loginUser,
   };
 };
 export default useFirebase;

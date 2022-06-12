@@ -10,13 +10,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { CartProvider } from 'react-use-cart';
 import DashboardHome from './Componet/Dashboard/DashboardHome/DashboardHome';
 import Register from './Componet/Login/Register';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
 
 
 
 function App() {
   return (
     <div className="App">
-      <CartProvider>
+     <AuthProvider>
+     <CartProvider>
       <BrowserRouter>
         <Navigation></Navigation>
       
@@ -31,6 +33,7 @@ function App() {
       </BrowserRouter> 
       </CartProvider>
 
+     </AuthProvider>
     </div>
   );
 }
