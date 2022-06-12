@@ -1,18 +1,22 @@
+import initializeFifebase from "./../Componet/Login/Firebase/firebase.init";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { useState } from "react";
+import { useEffect } from "react";
+initializeFifebase();
 
-import initializeFifebase from './../Componet/Login/Firebase/firebase.init';
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from 'react';
-initializeFifebase()
-
-
-const useFirebase = () =>{
-const [user, setUser] = useState({})
-// register user
-const auth = getAuth();
-const registerUser =  ( email, password) =>{
+const useFirebase = () => {
+  const [user, setUser] = useState({});
+  // register user
+  const auth = getAuth();
+  const registerUser = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        // Signed in 
+      .then((userCredential) => {
+        // Signed in
         const user = userCredential.user;
         // ...
       })
@@ -21,13 +25,34 @@ const registerUser =  ( email, password) =>{
         const errorMessage = error.message;
         // ..
       });
-}
+  };
+  // Log Out
+  const logout = () => {
+    signOut(auth)
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+  // user state change
+  useEffect(() => {
+   const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUser(user);
+        // ...
+      } else {
+        setUser({})
+      }
+    });
+    return () => unsubscribe;
+  }, []);
 
-return {
+  return {
     user,
-
-}
-
-
-}
-export default useFirebase
+    registerUser,
+    logout,
+  };
+};
+export default useFirebase;
