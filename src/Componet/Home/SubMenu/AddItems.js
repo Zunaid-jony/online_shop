@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, ButtonGroup, ButtonToolbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 
 const AddItems = () => {
@@ -70,7 +71,8 @@ const AddItems = () => {
            onClick={()=> emptyCart()} 
            > Clear Cart
            </Button>
-           <Button className="btn btn-primary m-2">Buy New</Button>
+           <Button className="btn btn-primary m-2">Buy New </Button>
+           
        
        </div> 
       </div>

@@ -9,6 +9,7 @@ import AddItems from './Componet/Home/SubMenu/AddItems';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { CartProvider } from 'react-use-cart';
 import DashboardHome from './Componet/Dashboard/DashboardHome/DashboardHome';
+import Register from './Componet/Login/Register';
 
 
 
@@ -23,6 +24,7 @@ function App() {
          <Route path='/' element={<Home></Home>}> </Route> 
          <Route path='/buy' element={<AddItems></AddItems>}> </Route> 
           <Route path='/login' element={<Login></Login>}> </Route>  
+          <Route path='/register' element={<Register></Register>}> </Route>  
          <Route path='/dashboard' element={<DashboardHome></DashboardHome> }> </Route> 
      
        </Routes>

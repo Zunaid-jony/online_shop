@@ -1,6 +1,7 @@
 import { Button, TextField } from '@mui/material';
 import React from 'react';
 import { FcGoogle } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -28,6 +29,9 @@ const Login = () => {
             <br></br>
             <br></br>
             <Button style={{ width: '50%'}}  variant="contained"> <FcGoogle></FcGoogle> Google</Button>
+            <br>
+            </br>
+            <p> <Link style={{textDecoration:'none'}} to='/register'> New User? Please Register</Link></p>
             
                 
             </div> 

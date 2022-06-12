@@ -769,7 +769,7 @@ justify-content: center;
 }
 /* login sections */
 .loginSection{
-  margin-top: 70px;
+  /* //margin-top: 70px; */
 }
 .loginInput{
  
@@ -782,6 +782,19 @@ justify-content: center;
   height: 400px;
   margin-left: 390px;
 }
+
+.registerInput{
+  margin-top: 120px;
+
+  text-align: center;
+   background-color: white;
+   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.15);
+   width: 600px;
+   height: 520px;
+   margin-left: 390px;
+
+}
+
 
 
 
