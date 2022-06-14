@@ -22,7 +22,7 @@ const Register = () => {
        return
       
 }
-registerUser(loginData.email, loginData.password)
+registerUser(loginData.email, loginData.password, loginData.userName)
     e.preventDefault();
   };
  
@@ -75,7 +75,7 @@ registerUser(loginData.email, loginData.password)
           />
           <br></br>
           <br></br>
-          <Button style={{ width: "50%" }} type={'submit'} variant="contained">
+          <Button style={{ width: "50%" }} type="submit" variant="contained">
             Register
           </Button>
           <br></br>

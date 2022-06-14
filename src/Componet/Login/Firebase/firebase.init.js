@@ -6,5 +6,5 @@ const initializeFifebase =  () =>{
     initializeApp(firebaseConfig);
 }
 
-export default initializeFifebase
+export default initializeFifebase;
 
