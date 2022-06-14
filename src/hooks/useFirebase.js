@@ -6,8 +6,8 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState , useEffect} from "react";
+
 initializeFifebase();
 
 const useFirebase = () => {

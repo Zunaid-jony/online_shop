@@ -17,8 +17,9 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 function App() {
   return (
     <div className="App">
-     <AuthProvider>
+     
      <CartProvider>
+     <AuthProvider>
       <BrowserRouter>
         <Navigation></Navigation>
       
@@ -31,9 +32,10 @@ function App() {
      
        </Routes>
       </BrowserRouter> 
+      </AuthProvider>
       </CartProvider>
 
-     </AuthProvider>
+   
     </div>
   );
 }
