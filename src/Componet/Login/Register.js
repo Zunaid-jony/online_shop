@@ -18,11 +18,11 @@ const Register = () => {
   };
   const handleLoginSubmit = (e) => {
    if(loginData.password !== loginData.password2){
-       alert('Your Password did not match')
+       alert('Your Password did not match plase try agein')
        return
       
 }
-registerUser(loginData.email, loginData.password, loginData.userName)
+registerUser(loginData.email, loginData.password, loginData.userName )
     e.preventDefault();
   };
  
