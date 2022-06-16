@@ -22,7 +22,7 @@ const Register = () => {
        return
       
 }
-registerUser(loginData.email, loginData.password, loginData.userName )
+registerUser(loginData.email, loginData.password )
     e.preventDefault();
   };
  
