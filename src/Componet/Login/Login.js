@@ -1,10 +1,12 @@
-import { Button, TextField } from "@mui/material";
+import { Alert, Button, CircularProgress, TextField } from "@mui/material";
 import React,{useState, useEffect} from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import useAuth from './../../hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({})
+    const {user, loginUser, isLoading } = useAuth();
     const handleOnChange = e =>{
         const field = e.target.name;
         const value = e.target.value;
@@ -15,6 +17,7 @@ const Login = () => {
 
     }
     const handleLoginSubmit = e =>{
+      loginUser(loginData.email, loginData.password)
         alert('hello')
         e.preventDefault()
     }
@@ -69,6 +72,8 @@ const Login = () => {
           </p>
         </div>
       </form>
+      {isLoading && <CircularProgress />}
+     {user?.email && <Alert severity="success">This is a success login</Alert> }
     </div>
   );
 };

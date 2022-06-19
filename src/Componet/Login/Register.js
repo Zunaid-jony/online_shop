@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+import { Alert, Button, CircularProgress, TextField } from "@mui/material";
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
-  const { registerUser } = useAuth();
+  const {user, registerUser,isLoading } = useAuth();
   const handleOnChange = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -22,13 +22,14 @@ const Register = () => {
        return
       
 }
-registerUser(loginData.email, loginData.password )
+registerUser(loginData.email, loginData.password,loginData.userName )
     e.preventDefault();
   };
  
   return (
     <div className="loginSections">
-      <form onSubmit={handleLoginSubmit}>
+     {!isLoading &&
+        <form onSubmit={handleLoginSubmit}>
         <div className="registerInput">
           <h3>Login</h3>
 
@@ -56,7 +57,7 @@ registerUser(loginData.email, loginData.password )
           <TextField
             style={{ width: "50%" }}
             id="outlined-password-input"
-            name="pasword"
+            name="password"
             onChange={handleOnChange}
             label="Password"
             type="password"
@@ -68,14 +69,14 @@ registerUser(loginData.email, loginData.password )
             style={{ width: "50%" }}
             id="outlined-password-input"
             label="Re-Password"
-            name="password2"
+            name='password2'
             onChange={handleOnChange}
             type="password"
             autoComplete="current-password"
           />
           <br></br>
           <br></br>
-          <Button style={{ width: "50%" }} type="submit" variant="contained">
+          <Button style={{ width: "50%" }}   type='submit' variant="contained">
             Register
           </Button>
           <br></br>
@@ -90,6 +91,9 @@ registerUser(loginData.email, loginData.password )
           </Link>
         </div>
       </form>
+     }
+     {isLoading && <CircularProgress />}
+     {user?.email && <Alert severity="success">This is a success login</Alert> }
     </div>
   );
 };
