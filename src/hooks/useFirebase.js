@@ -19,11 +19,9 @@ const useFirebase = () => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-      
-      
-        const destination = history?.state?.from || '/';
+        const destination = location?.state?.from || '/';
         history(destination, {replace: true});
-         //history.replace('/')
+         history.replace('/')
         // Signed in
         const user = userCredential.user;
         // ...
