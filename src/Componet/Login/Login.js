@@ -1,11 +1,13 @@
 import { Alert, Button, CircularProgress, TextField } from "@mui/material";
 import React,{useState, useEffect} from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from './../../hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({})
+    let location = useLocation();
+     const history = useNavigate();
     const {user, loginUser, isLoading } = useAuth();
     const handleOnChange = e =>{
         const field = e.target.name;
@@ -17,8 +19,8 @@ const Login = () => {
 
     }
     const handleLoginSubmit = e =>{
-      loginUser(loginData.email, loginData.password)
-        alert('hello')
+      loginUser(loginData.email,loginData.password, location, history)
+        // alert('hello')
         e.preventDefault()
     }
   return (
@@ -42,17 +44,17 @@ const Login = () => {
           <br></br>
           <br></br>
           <TextField
-            style={{ width: "50%" }}
-            id="outlined-password-input"
-            label="Password"
-            name="pasword"
-            onChange={handleOnChange}
-            type="password"
-            autoComplete="current-password"
+           style={{ width: "50%" }}
+           id="outlined-password-input"
+           name="password"
+           onChange={handleOnChange}
+           label="Password"
+           type="password"
+           autoComplete="current-password"
           />
           <br></br>
           <br></br>
-          <Button style={{ width: "50%" }} type="submit" variant="contained">
+          <Button style={{ width: "50%" }}  type='submit'  variant="contained">
               
             Login
           </Button>

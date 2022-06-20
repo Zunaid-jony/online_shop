@@ -11,6 +11,7 @@ import { CartProvider } from 'react-use-cart';
 import DashboardHome from './Componet/Dashboard/DashboardHome/DashboardHome';
 import Register from './Componet/Login/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
+import PrivateRoute from './Componet/Login/PrivateRoute/PrivateRoute';
 
 
 
@@ -28,7 +29,7 @@ function App() {
          <Route path='/buy' element={<AddItems></AddItems>}> </Route> 
           <Route path='/login' element={<Login></Login>}> </Route>  
           <Route path='/register' element={<Register></Register>}> </Route>  
-         <Route path='/dashboard' element={<DashboardHome></DashboardHome> }> </Route> 
+         <Route path='/dashboard' element={<PrivateRoute><DashboardHome></DashboardHome></PrivateRoute> }> </Route> 
      
        </Routes>
       </BrowserRouter> 
