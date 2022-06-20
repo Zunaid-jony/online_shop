@@ -14,6 +14,7 @@ import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import PrivateRoute from './Componet/Login/PrivateRoute/PrivateRoute';
 
 import AddProduct from './Componet/Dashboard/DashboardHome/AddProduct';
+import DashboardHeader from './Componet/Dashboard/DashboardHome/DashboardHeader';
 
 
 
@@ -40,7 +41,7 @@ function App() {
                   </PrivateRoute>
                 }
                 >
-                      {/* <Route index element={<DashboardHome></DashboardHome>} /> */}
+                       <Route index element={<DashboardHeader></DashboardHeader>} /> 
                     
                       {/* <Route path="abc" element={<Abc></Abc>}  /> */}
                       <Route path="addproduct" element={<AddProduct></AddProduct>}  />

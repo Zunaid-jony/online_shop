@@ -18,8 +18,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Link, Outlet } from 'react-router-dom';
 import { Button } from '@mui/material';
+import DashboardHeader from './DashboardHeader';
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const DashboardHome = (props) => {
     const { window } = props;
@@ -32,13 +33,19 @@ const DashboardHome = (props) => {
   const drawer = (
     <div>
       <Toolbar />
-      <Divider />
+     
    
-      <Link   to='/dashboard/addproduct'> <Button  style={{color:'white',fontSize: '18px',textDecoration: 'none'}} color="inherit">  addProduct</Button></Link>
+      <Link   to='/'> <Button  style={{color:'black',fontSize: '18px',textDecoration:'none'}} color="inherit">Home</Button></Link>
+
+      <Link   to='/dashboard/dashboards'> <Button  style={{color:'black',fontSize: '18px',textDecoration:'none'}} color="inherit"></Button></Link>
+
+      <Link   to='/dashboard/addproduct'> <Button  style={{color:'black',
+      fontSize: '18px',
+      textDecoration: 'none' }} color="inherit">  addProduct</Button></Link>
 
 
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Home', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -49,19 +56,8 @@ const DashboardHome = (props) => {
           </ListItem>
         ))}
       </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+     
+      
     </div>
   );
 
@@ -128,6 +124,7 @@ const DashboardHome = (props) => {
           sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
         >
           <Toolbar />
+          
          
         
               <Outlet/>
