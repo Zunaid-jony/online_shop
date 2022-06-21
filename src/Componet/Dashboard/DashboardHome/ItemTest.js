@@ -7,7 +7,7 @@ import ItemTs from './ItemTs';
 const ItemTest = () => {
     const [item, setItems] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/menuItem')
+        fetch('http://localhost:5000/menu')
         .then(res =>res.json())
         .then(data => setItems(data))
     },[])

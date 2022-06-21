@@ -32,7 +32,7 @@ const DashboardHome = (props) => {
   };
 
   const drawer = (
-    <div>
+    <div >
       <Toolbar />
      
    

@@ -33,7 +33,7 @@ const ItemCardModal = ({open, handleClose, handleOpen,allItem}) => {
         >
           <Box sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
-              <img style={{width:'60%' }} src={imgSrc}>
+              <img style={{width:'60%' }} src={`data:image/*; base64, ${imgSrc}`}>
               </img>
               <p>  {name} Price $ {price}</p>
      

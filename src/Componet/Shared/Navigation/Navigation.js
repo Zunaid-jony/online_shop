@@ -27,8 +27,8 @@ const Navigation = () => {
         <div className='navigations'>
      <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" r={1}  style={{background:'white',position: 'fixed'}}>
-        <Toolbar  >
-          <IconButton
+        <Toolbar className='navber-menu'  >
+          {/* <IconButton
             size="large"
             edge="start"
             style={{color:'black'}}
@@ -36,11 +36,11 @@ const Navigation = () => {
             sx={{ mr: 2 }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             
           </Typography>
-         <Link to='/' style={{color:'#d84c92'}}> <Button color="inherit"><HomeIcon></HomeIcon></Button></Link>
+         <Link  to='/' style={{color:'#d84c92'}}> <Button color="inherit"><HomeIcon></HomeIcon></Button></Link>
          <Link to='/dashboard'  style={{color:'#d84c92'}}> <Button color="inherit"><DashboardCustomizeRoundedIcon/></Button></Link>
          <Link to='/buy'  style={{color:'#d84c92'}}>
             <Button color="inherit">
@@ -51,7 +51,7 @@ const Navigation = () => {
           {
 
             user?.email ?
-            <Link to='/login'  style={{color:'#d84c92', textDecoration:'none'}}> <Button onClick={logout} color="inherit"> logOut </Button></Link> :
+            <Link  to='/login'  style={{color:'#d84c92', textDecoration:'none'}}> <Button  onClick={logout} color="inherit"> logOut </Button></Link> :
             <Link to='/login'  style={{color:'#d84c92'}}> <Button color="inherit">< LockOpenRoundedIcon></LockOpenRoundedIcon></Button></Link>
     
     

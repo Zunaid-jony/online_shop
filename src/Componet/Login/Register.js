@@ -41,7 +41,7 @@ const Register = () => {
             <h3>Login</h3>
 
             <br></br>
-            <TextField
+            <TextField className="login-input"
               style={{ width: "50%" }}
               label="Full Name"
               name="userName"
@@ -50,7 +50,7 @@ const Register = () => {
             />
             <br></br>
             <br></br>
-            <TextField
+            <TextField className="login-input"
               style={{ width: "50%" }}
               label="Email"
               type="email"
@@ -60,7 +60,7 @@ const Register = () => {
             />
             <br></br>
             <br></br>
-            <TextField
+            <TextField className="login-input"
               style={{ width: "50%" }}
               id="outlined-password-input"
               name="password"
@@ -71,7 +71,7 @@ const Register = () => {
             />
             <br></br>
             <br></br>
-            <TextField
+            <TextField className="login-input"
               style={{ width: "50%" }}
               id="outlined-password-input"
               label="Re-Password"
@@ -82,12 +82,12 @@ const Register = () => {
             />
             <br></br>
             <br></br>
-            <Button style={{ width: "50%" }} type="submit" variant="contained">
+            <Button className="login-input" style={{ width: "50%" }} type="submit" variant="contained">
               Register
             </Button>
             <br></br>
             <br></br>
-            <Button style={{ width: "50%" }} variant="contained">
+            <Button className="login-input" style={{ width: "50%" }} variant="contained">
               {" "}
               <FcGoogle></FcGoogle> Google
             </Button>

@@ -18,7 +18,7 @@ function ItemCard({ allItem }) {
     <div className="itemCard">
       <div className="isfavourite"></div>
       <div className="imgBox">
-        <img src={imgSrc} className="itemImg" alt=""></img>
+        <img src={`data:image/*; base64, ${imgSrc}`} className="itemImg" alt=""></img>
       </div>
 
       <div className="itemContent">

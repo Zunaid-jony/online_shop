@@ -23,7 +23,7 @@ const SubMenu = () => {
       .then((res) => res.json())
       .then((data) => setItems(data));
 
-    fetch("fetchdatas.json")
+    fetch("http://localhost:5000/menu")
       .then((res) => res.json())
       .then((data) => setAllItems(data));
 

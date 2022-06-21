@@ -1,3 +1,10 @@
+/* navber button */
+
+.navber-menu{
+
+  margin-left: 960px;
+  
+}
 /* add menuitems font */
 .addMenus{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -981,6 +988,50 @@ justify-content: center;
     height: 40px;
     margin: 3px;
     background-color: #b3085d;
+  }
+  .addMenus{
+    width: 90%;
+    margin-left: 16px;
+
+  }
+  .loginSection{
+   width: 100%;
+   margin-left: 0px;
+   height: 90%;
+   
+    
+
+  }
+  .loginInput{
+    width: 90%;
+    margin-left: 20px;
+     height: 90%;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .loginSection .login-input{
+    width: 80%!important; 
+  }
+  .loginSections{
+    width: 100%;
+    margin-left: 0px;
+    height: 90%;
+
+  }
+  .registerInput{
+    width: 90%;
+    margin-left: 20px;
+     height: 90%;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  .loginSections .login-input{
+    width: 80%!important; 
+  }
+  /* phone navber */
+  .navber-menu{
+
+    margin-left: -71px;
+    gap: 6%;
+    
   }
 }
 
