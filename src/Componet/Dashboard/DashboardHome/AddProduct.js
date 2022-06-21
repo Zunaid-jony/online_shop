@@ -58,7 +58,10 @@ const [name, setName] = useState('');
 })
 .then(response => response.json())
 .then(result => {
-  console.log('Success:', result);
+  if(result.insertedId){
+    console.log('MenuItems add success')
+
+  }
 })
 .catch(error => {
   console.error('Error:', error);

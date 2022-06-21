@@ -43,6 +43,10 @@ const DashboardHome = (props) => {
       fontSize: '18px',
       textDecoration: 'none' }} color="inherit">  addProduct</Button></Link>
 
+      <Link   to='/dashboard/test'> <Button  style={{color:'black',
+      fontSize: '18px',
+      textDecoration: 'none' }} color="inherit">ItemTest</Button></Link>
+
 
       <List>
         {['Home', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
