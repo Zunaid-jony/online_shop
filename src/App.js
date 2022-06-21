@@ -16,6 +16,8 @@ import PrivateRoute from './Componet/Login/PrivateRoute/PrivateRoute';
 import AddProduct from './Componet/Dashboard/DashboardHome/AddProduct';
 import DashboardHeader from './Componet/Dashboard/DashboardHome/DashboardHeader';
 import ItemTest from './Componet/Dashboard/DashboardHome/ItemTest';
+import { Items } from './Componet/data';
+import Ites from './Componet/Dashboard/DashboardHome/Ites';
 
 
 
@@ -46,6 +48,7 @@ function App() {
                     
                       {/* <Route path="abc" element={<Abc></Abc>}  /> */}
                       <Route path="addproduct" element={<AddProduct></AddProduct>}  />
+                      <Route path="additem" element={<Ites></Ites>}/>
                       <Route path="test" element={<ItemTest></ItemTest>}  />
                       {/* payment/:appointmentId ata akto spesell */}
                  

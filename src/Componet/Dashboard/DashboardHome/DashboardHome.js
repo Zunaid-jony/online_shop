@@ -20,6 +20,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { Button } from '@mui/material';
 import DashboardHeader from './DashboardHeader';
 
+
 const drawerWidth = 200;
 
 const DashboardHome = (props) => {
@@ -35,31 +36,25 @@ const DashboardHome = (props) => {
       <Toolbar />
      
    
-      <Link   to='/'> <Button  style={{color:'black',fontSize: '18px',textDecoration:'none'}} color="inherit">Home</Button></Link>
+      <Link style={{textDecoration:'none'}}   to='/'> <Button className  style={{color:'black',fontSize: '14px',textDecoration:'none'}}  color="inherit">Home</Button></Link>
 
-      <Link   to='/dashboard/dashboards'> <Button  style={{color:'black',fontSize: '18px',textDecoration:'none'}} color="inherit"></Button></Link>
+      <Link style={{textDecoration:'none'}}   to='/dashboard/dashboards'> <Button  style={{color:'black',fontSize: '18px',textDecoration:'none'}} color="inherit"></Button></Link>
 
-      <Link   to='/dashboard/addproduct'> <Button  style={{color:'black',
-      fontSize: '18px',
-      textDecoration: 'none' }} color="inherit">  addProduct</Button></Link>
+      <Link style={{textDecoration:'none'}}    to='/dashboard/addproduct'> <Button  style={{color:'black',
+      fontSize: '14px',
+      textDecoration: 'none' }} color="inherit">  add menu</Button></Link>
+      <br></br>
+      <Link style={{textDecoration:'none'}}    to='/dashboard/additem'> <Button  style={{color:'black',
+      fontSize: '14px',
+      textDecoration: 'none' }} color="inherit">  add items</Button></Link>
+      <br></br>
 
-      <Link   to='/dashboard/test'> <Button  style={{color:'black',
-      fontSize: '18px',
+      <Link style={{textDecoration:'none'}}    to='/dashboard/test'> <Button  style={{color:'black',
+      fontSize: '14px',
       textDecoration: 'none' }} color="inherit">ItemTest</Button></Link>
 
 
-      <List>
-        {['Home', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      
      
       
     </div>

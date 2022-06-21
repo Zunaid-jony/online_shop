@@ -30,7 +30,7 @@ const currencies = [
   },
 ];
 
-const AddProduct = () => {
+const Ites = () => {
 // const [name, setName] = useState('');
 const [ itemId, setItemId] = useState('');
 const [imgSrc, setImgSrc] = useState(null);
@@ -71,7 +71,7 @@ const [name, setName] = useState('');
     <div className='addMenus'>
       <Container>
      
-      <h2>Add MenuItems</h2>
+      <h2>Add Items</h2>
       <br></br>
       <br></br>
       <form onSubmit={handleSubmit}>
@@ -136,4 +136,4 @@ const [name, setName] = useState('');
   );
 };
 
-export default AddProduct;
+export default Ites;
