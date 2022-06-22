@@ -65,16 +65,16 @@ const Footer = () => {
                             <Box>
                                
                                
-                                <Link  style={{textDecoration:'none'}} href="#/https://www.facebook.com/" color='inherit'> 
+                                <Link  style={{textDecoration:'none'}} href="#https://www.facebook.com/" color='inherit'> 
                                  <EmailIcon sx={{ m: 2 }} ></EmailIcon>
                                  
                                  </Link>
-                                <Link  style={{textDecoration:'none'}} href="#/https://www.facebook.com/" color='inherit'> 
+                                <Link  style={{textDecoration:'none'}} href="#https://github.com/Zunaid-jony" color='inherit'> 
                                 <GitHubIcon></GitHubIcon>
                                  
                                  
                                  </Link>
-                                <Link  style={{textDecoration:'none'}} href="#/https://www.facebook.com/" color='inherit'> 
+                                <Link  style={{textDecoration:'none'}} href="#https://www.linkedin.com/in/md-jony-miah-68a164176/" color='inherit'> 
                                 <LinkedInIcon sx={{ m: 2 }}></LinkedInIcon>
                                  
                                  
@@ -84,7 +84,7 @@ const Footer = () => {
                             <Box>
                                
                                
-                               <Link  style={{textDecoration:'none'}} href="#/https://www.facebook.com/" color='inherit'> 
+                               <Link  style={{textDecoration:'none'}} href="#https://mail.google.com/mail/u/2/#inbox" color='inherit'> 
                                 < FacebookIcon sx={{ m: 2 }} ></FacebookIcon>
                                 
                                 </Link>

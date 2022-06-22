@@ -5,27 +5,24 @@ import { useState } from 'react';
 
 const currencies = [
   {
-    value: 'USD',
+    value: 'Burger',
     label: 'Burger',
   },
   {
-    value: 'EUR',
+    value: 'Pizza',
     label: 'Pizza',
   },
   {
-    value: 'BTC',
+    value: 'Hotdog',
     label: 'Hotdog',
   },
+  
   {
-    value: 'JPY',
-    label: 'Taco',
-  },
-  {
-    value: 'JPY',
+    value: 'Snack',
     label: 'Snack',
   },
   {
-    value: 'JPY',
+    value: 'Drink',
     label: 'Drink',
   },
 ];
