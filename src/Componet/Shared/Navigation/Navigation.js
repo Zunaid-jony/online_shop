@@ -13,6 +13,7 @@ import LockOpenRoundedIcon from '@mui/icons-material/LockOpenRounded';
 import HomeIcon from '@mui/icons-material/Home';
 import { useCart } from 'react-use-cart';
 import useAuth from './../../../hooks/useAuth';
+import LogoutIcon from '@mui/icons-material/Logout';
 const Navigation = () => {
   const {user, logout} = useAuth()
   const { isEmpty,
@@ -51,7 +52,7 @@ const Navigation = () => {
           {
 
             user?.email ?
-            <Link  to='/login'  style={{color:'#d84c92', textDecoration:'none'}}> <Button  onClick={logout} color="inherit"> logOut </Button></Link> :
+            <Link  to='/login'  style={{color:'#d84c92', textDecoration:'none'}}> <Button  onClick={logout} color="inherit"><LogoutIcon></LogoutIcon> </Button></Link> :
             <Link to='/login'  style={{color:'#d84c92'}}> <Button color="inherit">< LockOpenRoundedIcon></LockOpenRoundedIcon></Button></Link>
     
     

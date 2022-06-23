@@ -6,24 +6,24 @@ import { useState } from 'react';
 const currencies = [
   {
     value: 'Burger',
-    label: 'Burger',
+    label: 'Burge',
   },
   {
     value: 'Pizza',
-    label: 'Pizza',
+    label: 'Pizz',
   },
   {
     value: 'Hotdog',
-    label: 'Hotdog',
+    label: 'Hotdo',
   },
   
   {
     value: 'Snack',
-    label: 'Snack',
+    label: 'Snac',
   },
   {
     value: 'Drink',
-    label: 'Drink',
+    label: 'Drin',
   },
 ];
 

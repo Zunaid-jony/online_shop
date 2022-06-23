@@ -7,7 +7,8 @@ const MenuCard = ({ item, isActive }) => {
     <div className={`rowMenuCard ${isActive ? `active` : ``}`}>
       <div className="imgBox">
 
-        <img  src={`data:image/*; base64, ${imgSrc} `}alt=""></img>
+        <img  src={imgSrc} alt=""></img>
+        {/* <img  src={`data:image/*; base64, ${imgSrc} `}alt=""></img> */}
       </div>
       <h3>{name}</h3>
       <i className="loadMenu">

@@ -15,13 +15,13 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   // register user
   const auth = getAuth();
-  const registerUser = (email, password,history, location) => {
+  const registerUser = (email, password, location,history) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const destination = location?.state?.from || '/';
-        history(destination, {replace: true});
-         history.replace('/')
+        const destinations = location?.state?.from || '/';
+        history(destinations, {replace: true});
+         //history.replace('/')
         // Signed in
         const user = userCredential.user;
         // ...

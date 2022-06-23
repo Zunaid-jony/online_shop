@@ -22,19 +22,19 @@ const Footer = () => {
                     <Grid container spacing={5}>
                         <Grid item xs={12} sm={4}>
                             <Box borderBottom={1} >
-                                   help 
+                                   About
                             </Box>
                             <Box>
                                 <Link href='/facebok.com' color='inherit'></Link>
-                                Cotact
+                                md.jony.soft@gmail.com
                             </Box>
                             <Box>
                                 <Link href='/ddfd' color='inherit'></Link>
-                                Support
+                                01627392810
                             </Box>
                             <Box>
                                 <Link href='/ddfd' color='inherit'></Link>
-                                Privacy
+                             Dhaka saver 212
                             </Box>
 
                         </Grid>

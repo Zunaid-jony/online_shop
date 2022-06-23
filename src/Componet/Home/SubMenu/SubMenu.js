@@ -19,11 +19,12 @@ const SubMenu = () => {
   }
 
   useEffect(() => {
-    fetch('http://localhost:5000/menuItem')
+    fetch('fetchdata.json')
+    // fetch('http://localhost:5000/menuItem')
       .then((res) => res.json())
       .then((data) => setItems(data));
 
-    fetch("http://localhost:5000/menu")
+    fetch("fetchdatas.json")
       .then((res) => res.json())
       .then((data) => setAllItems(data));
 
